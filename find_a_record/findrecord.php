@@ -18,32 +18,33 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-$servername = "localhost";
-$username = "[USERRNAME]";
-$password = "[YOUR  DB PW]";
-$dbname = "[DB NAME]";
+$servername = "us-cdbr-azure-central-a.cloudapp.net";
+$username = "bd5ab470b5c23b";
+$password = "49de310d";
+$dbname = "jackson156";
 
 
-               $fname = (isset($_POST['fname'])    ? $_POST['fname']   : '');
-               $lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
-               $email = (isset($_POST['email'])    ? $_POST['email']   : '');
+               $Customers = (isset($_POST['Customers'])    ? $_POST['Customers']   : '');
+               $Ordernumber = (isset($_POST['Ordernumber'])    ? $_POST['Ordernumber']   : '');
+               $Orderdate = (isset($_POST['Orderdate'])    ? $_POST['Orderdate']   : '');
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Create a connection
+
+$conn = mysqli_connect(us-cdbr-azure-central-a.cloudapp.net,bd5ab470b5c23b, 49de310d, jackson156);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT id,fname, lname, email FROM [TABLE NAME] where fname = '$fname' AND lname = '$lname' AND email = '$email' LIMIT 1";
+$sql= "SELECT id,customers, Orderdate, email FROM mytable where customers = '$Customers' AND Orderdate = '$Orderdate' AND Ordernumber = '$Ordernumber' LIMIT 1";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo "<b>id: " . $row["id"]. "</b><br>";
-        echo "<b>Name: " . $row["fname"]. " " . $row["lname"]. "</b><br>";
-        echo "<b>Email: " . $row["email"]. "</b><br>";
+        echo "<b>Name: " . $row["Customers"]. " " . $row["Ordernumber"]. "</b><br>";
+        echo "<b>Orderdate: " . $row["Orderdate"]. "</b><br>";
     }
 } else {
     echo "Sorry there are no matches! Please check your entry and try again.";
