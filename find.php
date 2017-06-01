@@ -11,8 +11,8 @@
 </head>
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
-	<div data-role="header" data-theme="b">
-				<h1>
+					<div data-role="header" data-theme="b">
+						<h1>
 					Find your contact
 						</h1>	</div>
 								<div data-role="content">
@@ -44,10 +44,11 @@
 								mysqli_close($conn);
 
 								?>
-					</div>
-				</div>
+
+							</div>
+		</div>
 				<div data-role="footer" data-theme="b">
-	  <h4>Sireta Diaz &copy; 2016</h4>
-	</div>
+			  <h4>Sireta Diaz &copy; 2016</h4>
+			</div>
 	</body>
 </html>
