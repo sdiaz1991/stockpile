@@ -17,7 +17,6 @@
 						</h1>	</div>
 								<div data-role="content">
 
-
 								<?php
 								include 'config.php';
 								include 'opendb.php';
@@ -27,7 +26,7 @@
 
 								$sql= "SELECT id, fname, lname
 								FROM customers
-								WHERE fname LIKE '$fname' AND lname LIKE '$lname' LIMIT 1";
+								WHERE fname = '$fname' AND lname = '$lname' LIMIT 1";
 								$result = mysqli_query($conn, $sql);
 
 								if (mysqli_num_rows($result) > 0) {
