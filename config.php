@@ -5,6 +5,3 @@ $dbuser = 'bd5ab470b5c23b';
 $dbpass = '49de310d';
 $dbname = 'jackson156';
 ?>
-
-
-
