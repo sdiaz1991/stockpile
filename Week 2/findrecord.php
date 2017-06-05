@@ -18,6 +18,7 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
+	
 $servername = "us-cdbr-azure-central-a.cloudapp.net";
 $username = "bd5ab470b5c23b";
 $password = "49de310d";
