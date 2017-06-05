@@ -24,9 +24,9 @@ $password = "49de310d";
 $dbname = "jackson156";
 
 
-               $fname = (isset($_POST['fname'])    ? $_POST['fname']   : '');
-               $lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
-               $date = (isset($_POST['date'])    ? $_POST['date']   : '');
+               $Ordernumber = (isset($_POST['OrdernumberID'])    ? $_POST['OrdernumberID']   : '');
+               $dataofdelivery = (isset($_POST['dataofdelivery'])    ? $_POST['dataofdelivery']   : '');
+               $Company = (isset($_POST['CompanyID'])    ? $_POST['CompanyID']   : '');
 
 // Create a connection
 
@@ -36,15 +36,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT id,fname, lname, date FROM ordernumber where fname = '$fname' AND lname = '$lname' AND date = '$date' LIMIT 1";
+$sql= "SELECT id,OrdernumberID, dateofdelivery,companyID FROM ordernumber where OrdernumberID = '$OrdernumberID' dateofdelivery = $'dateofdelivery' AND CompanyID = '$CompanyID' LIMIT 1";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
         echo "<b>id: " . $row["id"]. "</b><br>";
-        echo "<b>Name: " . $row["fname"]. " " . $row["lname"]. "</b><br>";
-        echo "<b>date: " . $row["date"]. "</b><br>";
+        echo "<b>Ordernumber: " . $row["OrdernumberID"]. " " . $row["dataofdelivery"]. "</b><br>";
+        echo "<b>Company: " . $row["CompanyID"]. "</b><br>";
     }
 } else {
     echo "Sorry there are no matches! Please check your entry and try again.";
