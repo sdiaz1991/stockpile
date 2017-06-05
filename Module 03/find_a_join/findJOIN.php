@@ -18,9 +18,9 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-$servername = "["us-cdbr-azure-central-a.cloudapp.net]";
-$username = "[bd5ab470b5c23b]";
-$password = "[49de310d]";
+$dbhost = "["us-cdbr-azure-central-a.cloudapp.net]";
+$dbname = "[bd5ab470b5c23b]";
+$dbpass = "[49de310d]";
 $dbname = "[jackson156]";
 
 
@@ -30,7 +30,7 @@ $dbname = "[jackson156]";
 	   $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
 
 	   // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
