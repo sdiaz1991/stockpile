@@ -18,7 +18,7 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-$dbhost = "["us-cdbr-azure-central-a.cloudapp.net]";
+$dbhost = "[us-cdbr-azure-central-a.cloudapp.net]";
 $dbname = "[bd5ab470b5c23b]";
 $dbpass = "[49de310d]";
 $dbname = "[jackson156]";
