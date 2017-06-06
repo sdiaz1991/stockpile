@@ -36,10 +36,11 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql= "SELECT company.CompanyID,company.address,company.City,company.zip,
+$sql=SELECT company.CompanyID,company.address,company.City,company.zip,
+
 ordernumber.OrdernumberID,ordernumber.dateofdelivery FROM company
-LEFT OUTER JOIN ordernumber on company.CompanyID = ordernumber.CompanyID
-ORDER BY company.Address LIMIT 1";
+
+JOIN ordernumber on company.id = ordernumber.id  LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
@@ -50,6 +51,8 @@ $result = mysqli_query($conn, $sql);
 		echo "address: " . $row ['address'] . "<br>";
 		echo "city:    " . $row ['City']    . "<br>";
 		echo "zip:     "  .$row ['zip']     . "<br>";
+		echo "Ordernumber: " $row ['OrdernumberID'] ."<br>";
+		echo "dateofdelivery: " $row ['dateofdelivery'] . "<br>";
 		}
 								} else {
 								    echo "0 results";
