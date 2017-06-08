@@ -18,10 +18,10 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-$dbhost = "[us-cdbr-azure-central-a.cloudapp.net]";
-$dbname = "[bd5ab470b5c23b]";
-$dbpass = "[49de310d]";
-$dbname = "[jackson156]";
+$dbhost = "us-cdbr-azure-central-a.cloudapp.net";
+$dbname = "bd5ab470b5c23b";
+$dbpass = "49de310d";
+$dbname = "jackson156";
 
 
        $CompanyID = (isset($_POST['CompanyID']} ? $_POST['CompanyID'] : '');
@@ -33,7 +33,7 @@ $dbname = "[jackson156]";
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 // Check connection
 if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 $sql="SELECT company.CompanyID,company.address,company.City,company.zip,
@@ -56,13 +56,13 @@ if (mysqli_numrows ($results) > 0) {
 		echo "Ordernumber: " $row ['OrdernumberID'] ."<br>";
 		echo "dateofdelivery: " $row ['dateofdelivery'] . "<br>";
 		}
-								} else {
-								    echo "0 results";
-								}
+	} else {
+	    echo "0 results";
+	}
 
-								mysqli_close($conn);
+	mysqli_close($conn);
 
-								?>
+	?>
 
 							</div>
 		</div>
