@@ -23,7 +23,7 @@ $dbpass = "49de310d";
 $dbname = "jackson156";
 
 
-       $CompanyID = (isset($_POST['CompanyID']} ? $_POST['CompanyID'] : '');
+       $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
 	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
 	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
 	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
@@ -35,24 +35,24 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql="SELECT company.CompanyID,company.address,company.City,company.zip,
+$sql="SELECT company.cmpanyid,company.address,company.city,company.zip,
 
-ordernumber.OrdernumberID,ordernumber.dateofdelivery
+ordernumber.ordernumberID,ordernumber.dateofdelivery
 FROM company
 
-JOIN ordernumber on company.CompanyID = ordernumber.CompanyID2
-WHERE company.CompanyID = '$CompanyID' LIMIT 1";
+JOIN ordernumber on company.companyid = ordernumber.companyid2
+WHERE company.companyid = '$CompanyID' LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_numrows ($results) > 0) {
 	//output data of each row
 	while ($row = mysqli_fetch_assoc ($result)) {
-		echo "Company: " . $row['CompanyID']. "<br>";
+		echo "Company: " . $row['companyid']. "<br>";
 		echo "address: " . $row ['address'] . "<br>";
-		echo "city:    " . $row ['City']    . "<br>";
+		echo "city:    " . $row ['city']    . "<br>";
 		echo "zip:     "  .$row ['zip']     . "<br>";
-		echo "Ordernumber: " $row ['OrdernumberID'] ."<br>";
+		echo "Ordernumber: " $row ['ordernumberID'] ."<br>";
 		echo "dateofdelivery: " $row ['dateofdelivery'] . "<br>";
 		}
 	} else {
