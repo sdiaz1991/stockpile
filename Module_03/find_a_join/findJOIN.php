@@ -41,7 +41,8 @@ $sql="SELECT company.CompanyID,company.address,company.City,company.zip,
 ordernumber.OrdernumberID,ordernumber.dateofdelivery
 FROM company
 
-JOIN ordernumber on company.CompanyID = ordernumber.COmpanyID2  LIMIT 1";
+JOIN ordernumber on company.CompanyID = ordernumber.CompanyID2
+WHERE company.CompanyID = '$CompanyID' LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
