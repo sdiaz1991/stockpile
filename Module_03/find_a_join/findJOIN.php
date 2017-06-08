@@ -25,9 +25,9 @@ $dbname = "[jackson156]";
 
 
        $CompanyID = (isset($_POST['CompanyID']} ? $_POST['CompanyID'] : '');
-	   $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
-	   $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
-	   $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
+	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
+	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
+	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
 
 	   // Create connection
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
@@ -41,7 +41,7 @@ $sql="SELECT company.CompanyID,company.address,company.City,company.zip,
 ordernumber.OrdernumberID,ordernumber.dateofdelivery
 FROM company
 
-JOIN ordernumber on company.id = ordernumber.id  LIMIT 1";
+JOIN ordernumber on company.CompanyID = ordernumber.COmpanyID2  LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
