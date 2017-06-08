@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<script src="javascript/storage.js"></script>
 </head>
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
@@ -63,7 +62,6 @@ if (mysqli_numrows ($results) > 0) {
 	mysqli_close($conn);
 
 	?>
-</div>
 		</div>
 		</div>
 				<div data-role="footer" data-theme="b">
