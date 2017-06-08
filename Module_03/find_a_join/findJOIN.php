@@ -63,8 +63,8 @@ if (mysqli_numrows ($results) > 0) {
 	mysqli_close($conn);
 
 	?>
-
-							</div>
+</div>
+		</div>
 		</div>
 				<div data-role="footer" data-theme="b">
 			  <h4>Sireta Diaz &copy; 2016</h4>
