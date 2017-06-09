@@ -21,7 +21,7 @@
 			include 'opendb.php';
 
 
-      // $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
+       $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
 	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
 	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
 	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
@@ -31,8 +31,8 @@
 			$sql="SELECT company.companyid, company.address, company.city,
 			 company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
 			FROM company
-			JOIN ordernumber on company.companyid = ordernumber.companyid2";
-		//	WHERE company.companyid LIKE '$companyid' LIMIT 100";
+			JOIN ordernumber on company.companyid = ordernumber.companyid2
+			WHERE company.companyid LIKE '$companyid' LIMIT 100";
 
 			$result = mysqli_query($conn, $sql);
 
