@@ -21,7 +21,7 @@
 			include 'opendb.php';
 
 
-       $companyid = (isset($_POST['companyid'])	? $_POST['companyid'] : '');
+       $companyid = (isset($_POST['companyid'])	? $_POST['companyid']	:	'');
 	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
 	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
 	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
@@ -40,11 +40,11 @@
 				//output data of each row
 				while ($row = mysqli_fetch_assoc ($result)) {
 					echo "Company: " . $row["companyid"]. "<br>";
-					echo "address: " . $row ["address"] . "<br>";
-					echo "city:    " . $row ["city"]    . "<br>";
-					echo "zip:     "  .$row ["zip"]     . "<br>";
-					echo "Ordernumber: " $row ["ordernumberid"] ."<br>";
-					echo "dateofdelivery: " $row ["dateofdelivery"] . "<br>";
+					echo "address: " . $row ["address"]. "<br>";
+					echo "city:    " . $row ["city"]. "<br>";
+					echo "zip:     "  .$row ["zip"]. "<br>";
+					echo "Ordernumber: " $row ["ordernumberid"]. "<br>";
+					echo "dateofdelivery: " $row ["dateofdelivery"]. "<br>";
 					}
 				} else {
 				    echo "0 results";
