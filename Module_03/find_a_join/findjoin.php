@@ -36,7 +36,7 @@
 
 			$result = mysqli_query($conn, $sql);
 
-			if (mysqli_numrows ($results) > 0) {
+			if (mysqli_numrows ($result) > 0) {
 				//output data of each row
 				while ($row = mysqli_fetch_assoc ($result)) {
 					echo "Company: " . $row["companyid"]. "<br>";
