@@ -28,11 +28,8 @@
 
 	   // Create connection
 
-$sql="SELECT company.cmpanyid,company.address,company.city,company.zip,
-
-ordernumber.ordernumberID,ordernumber.dateofdelivery
+$sql="SELECT company.companyid, company.address, company.city, company.zip, ordernumber.ordernumberID, ordernumber.dateofdelivery
 FROM company
-
 JOIN ordernumber on company.companyid = ordernumber.companyid2
 WHERE company.companyid = '$companyid' LIMIT 1";
 
