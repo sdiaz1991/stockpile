@@ -17,8 +17,8 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-	include 'config.php';
-	include 'opendb.php';
+			include 'config.php';
+			include 'opendb.php';
 
 
        $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
@@ -28,30 +28,31 @@
 
 	   // Create connection
 
-$sql="SELECT company.companyid, company.address, company.city, company.zip, ordernumber.ordernumberID, ordernumber.dateofdelivery
-FROM company
-JOIN ordernumber on company.companyid = ordernumber.companyid2
-WHERE company.companyid = '$companyid' LIMIT 1";
+			$sql="SELECT company.companyid, company.address, company.city,
+			 company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
+			FROM company
+			JOIN ordernumber on company.companyid = ordernumber.companyid2
+			WHERE company.companyid LIKE '$companyid' LIMIT 100";
 
-$result = mysqli_query($conn, $sql);
+			$result = mysqli_query($conn, $sql);
 
-if (mysqli_numrows ($results) > 0) {
-	//output data of each row
-	while ($row = mysqli_fetch_assoc ($result)) {
-		echo "Company: " . $row["companyid"]. "<br>";
-		echo "address: " . $row ["address"] . "<br>";
-		echo "city:    " . $row ["city"]    . "<br>";
-		echo "zip:     "  .$row ["zip"]     . "<br>";
-		echo "Ordernumber: " $row ["ordernumberID"] ."<br>";
-		echo "dateofdelivery: " $row ["dateofdelivery"] . "<br>";
-		}
-	} else {
-	    echo "0 results";
-	}
+			if (mysqli_numrows ($results) > 0) {
+				//output data of each row
+				while ($row = mysqli_fetch_assoc ($result)) {
+					echo "Company: " . $row["companyid"]. "<br>";
+					echo "address: " . $row ["address"] . "<br>";
+					echo "city:    " . $row ["city"]    . "<br>";
+					echo "zip:     "  .$row ["zip"]     . "<br>";
+					echo "Ordernumber: " $row ["ordernumberid"] ."<br>";
+					echo "dateofdelivery: " $row ["dateofdelivery"] . "<br>";
+					}
+				} else {
+				    echo "0 results";
+				}
 
-	mysqli_close($conn);
+				mysqli_close($conn);
 
-	?>
+		?>
 		</div>
 		</div>
 				<div data-role="footer" data-theme="b">
