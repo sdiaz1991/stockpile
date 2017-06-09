@@ -17,10 +17,8 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-$dbhost = "us-cdbr-azure-central-a.cloudapp.net";
-$dbuser = "bd5ab470b5c23b";
-$dbpass = "49de310d";
-$dbname = "jackson156";
+	include 'config.php';
+	include 'opendb.php';
 
 
        $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
@@ -29,11 +27,6 @@ $dbname = "jackson156";
 	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
 
 	   // Create connection
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 
 $sql="SELECT company.cmpanyid,company.address,company.city,company.zip,
 
@@ -41,7 +34,7 @@ ordernumber.ordernumberID,ordernumber.dateofdelivery
 FROM company
 
 JOIN ordernumber on company.companyid = ordernumber.companyid2
-WHERE company.companyid = '$CompanyID' LIMIT 1";
+WHERE company.companyid = '$companyid' LIMIT 1";
 
 $result = mysqli_query($conn, $sql);
 
