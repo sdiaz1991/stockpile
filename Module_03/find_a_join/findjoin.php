@@ -32,11 +32,11 @@
 			 company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
 			FROM company
 			JOIN ordernumber on company.companyid = ordernumber.companyid2
-			WHERE companyid LIKE '$companyid' LIMIT 100";
+			WHERE companyid = '$companyid' LIMIT 100";
 
 			$result = mysqli_query($conn, $sql);
 
-			if (mysqli_numrows ($result) > 0) {
+			if (mysqli_num_rows ($result) > 0) {
 				//output data of each row
 				while ($row = mysqli_fetch_assoc ($result)) {
 					echo "Company: " . $row["companyid"]. "<br>";
