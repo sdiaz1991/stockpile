@@ -17,8 +17,6 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
-			error_reporting(E_ALL);
-
 
 			include 'config.php';
 			include 'opendb.php';
