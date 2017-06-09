@@ -31,8 +31,8 @@
 			$sql="SELECT company.companyid, company.address, company.city,
 			 company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
 			FROM company
-			JOIN ordernumber on company.companyid = ordernumber.companyid2
-			WHERE company.companyid LIKE '$companyid' LIMIT 100";
+			JOIN ordernumber on company.companyid = ordernumber.companyid2";
+		//	WHERE company.companyid LIKE '$companyid' LIMIT 100";
 
 			$result = mysqli_query($conn, $sql);
 
