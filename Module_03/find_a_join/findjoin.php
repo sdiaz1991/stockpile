@@ -21,7 +21,7 @@
 			include 'opendb.php';
 
 
-       $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
+      // $companyid = (isset($_POST['companyid']} ? $_POST['companyid'] : '');
 	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
 	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
 	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
