@@ -17,22 +17,19 @@
 		</h1>	</div>
 				<div data-role="content">
 	<?php
+			error_reporting(E_ALL);
+
+
 			include 'config.php';
 			include 'opendb.php';
 
 
-       $companyid = (isset($_POST['companyid'])	? $_POST['companyid']	:	'');
-	  //  $address  = (isset($_POST['address']}   ? $_POST ['address']  : '');
-	  //  $City     = (isset ($_POST['City']}     ? $_POST ['City']      : '');
-	  //  $zip      =  (isset ($_POST['zip']}     ? $_POST ['zip']       : '');
+			$companyid = (isset($_POST['companyid'])    ? $_POST['companyid']   : '');
 
-	   // Create connection
-
-			$sql= "SELECT company.companyid, company.address, company.city,
-			 company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
-			FROM company
-			JOIN ordernumber on company.companyid = ordernumber.companyid2
-			WHERE companyid = '$companyid' LIMIT 100";
+			$sql= "SELECT company.companyid, company.address, company.city, company.zip, ordernumber.ordernumberid, ordernumber.dateofdelivery
+					FROM company
+					JOIN ordernumber on company.companyid = ordernumber.companyid2
+					WHERE companyid LIKE '$companyid' LIMIT 1";
 
 			$result = mysqli_query($conn, $sql);
 

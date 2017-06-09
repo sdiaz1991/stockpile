@@ -1,4 +1,4 @@
- <?php
+<?php
 // Create connection
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 // Check connection
