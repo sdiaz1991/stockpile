@@ -25,9 +25,17 @@ $password = "49de310d";
 $dbname = "jackson156";
 
 
+<<<<<<< HEAD
+               $id = (isset($_POST['id'])    ? $_POST['id']   : '');
+               $ordernumber = (isset($_POST['OrdernumberID'])    ? $_POST['OrdernumberID']   : '');
+               $dateofdelivery = (isset($_POST['dateofdelivery'])    ? $_POST['dateofdelivery']   : '');
+				$company = (isset($_POST['CompanyID']) ? $_POST ['CompanyID'] :'');
+			
+=======
                $Ordernumber = (isset($_POST['OrdernumberID'])    ? $_POST['OrdernumberID']   : '');
                $dataofdelivery = (isset($_POST['dataofdelivery'])    ? $_POST['dataofdelivery']   : '');
                $Company = (isset($_POST['CompanyID'])    ? $_POST['CompanyID']   : '');
+>>>>>>> 435350db00b82681a34cd16014d5f2b39b973e75
 
 // Create a connection
 
@@ -37,28 +45,50 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+<<<<<<< HEAD
+=======
 
 $sql= "SELECT id,OrdernumberID, dateofdelivery,companyID FROM ordernumber where OrdernumberID = '$OrdernumberID' dateofdelivery = $'dateofdelivery' AND CompanyID = '$CompanyID' LIMIT 1";
+>>>>>>> 435350db00b82681a34cd16014d5f2b39b973e75
 
+$sql= "SELECT id,OrdernumberID, dateofdelivery, CompanyID FROM ordernumber where ordernumber = '$Ordernumber',  dateofdelivery = '$dateofdelivery', AND companyID = '$CompanyID' LIMIT 1";
+
+$result = mysqli_query($conn, $sql);
+					
 if (mysqli_num_rows($result) > 0) {
+<<<<<<< HEAD
+// output data of each row
+while($row = mysqli_fetch_assoc($result)) {
+echo "ID: " . $row["id"]. "<br>";
+echo "companyID: " . $row["CompanyID"]. "<br>";
+echo "OrderDateID: " . $row["dateofdelivery"]. "<br><hr>";
+
+}
+=======
     while ($row = mysqli_fetch_assoc ($result)) {
 		echo "id " . $row['id']. "<br>";
 		echo "Ordernumber: " . $row ['OrdernumberID'] . "<br>";
 		echo "dateofdelivery:  " . $row ['dateofdelivery'] . "<br>";
 		echo "Company:     "  .$row ['CompanyID']     . "<br>";
 		}
+>>>>>>> 435350db00b82681a34cd16014d5f2b39b973e75
 } else {
-    echo "Sorry there are no matches! Please check your entry and try again.";
+echo "0 results";
 }
+					
+					mysqli_close($conn);
 
-mysqli_close($conn);
+								?>
 
-?>
-
-
-
+							</div>
+		</div>
 				<div data-role="footer" data-theme="b">
-	  <h4>YOUR APP NAME &copy; 2016</h4>
-	</div>
+			  <h4>Sireta Diaz &copy; 2016</h4>
+			</div>
 	</body>
 </html>
+
+
+
+
+				
