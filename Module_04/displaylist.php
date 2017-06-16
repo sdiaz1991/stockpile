@@ -21,7 +21,7 @@
 
 					<?php
 					include 'config.php';
-					include 'opendb.php';
+					include 'open_db.php';
 
 					$sql= "SELECT id, fname, lname
 					FROM lecture1";
