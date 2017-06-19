@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b27483f2ea84f3545c7626311617dc9dd32598f4
 <html>
 		<head>
 	<title>Find a Contact</title>
@@ -22,7 +25,11 @@
 
 					<?php
 					include 'config.php';
+<<<<<<< HEAD
+					include 'open_db.php';
+=======
 					include 'opendb.php';
+>>>>>>> b27483f2ea84f3545c7626311617dc9dd32598f4
 
 					$sql= "SELECT id, fname, lname
 					FROM lecture1";
@@ -48,6 +55,8 @@
 	</div>
 	</body>
 </html>
+<<<<<<< HEAD
+=======
 =======
 <html>
 		<head>
@@ -99,3 +108,4 @@
 	</body>
 </html>
 >>>>>>> 581204e10a1a7a54824d22edb6cbfc07eda7637e
+>>>>>>> b27483f2ea84f3545c7626311617dc9dd32598f4

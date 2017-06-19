@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <html>
 		<head>
 	<title>Find a Contact</title>
@@ -55,6 +58,7 @@
 </html>
 =======
 <<<<<<< HEAD
+>>>>>>> b27483f2ea84f3545c7626311617dc9dd32598f4
  <?php
 // Create connection
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
@@ -63,6 +67,8 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
+<<<<<<< HEAD
+=======
 =======
 <?php
 // Create connection
@@ -74,3 +80,4 @@ if (!$conn) {
 ?>
 >>>>>>> 1ebaa3be9eb2437c334b797f7e8992faa7088c00
 >>>>>>> 581204e10a1a7a54824d22edb6cbfc07eda7637e
+>>>>>>> b27483f2ea84f3545c7626311617dc9dd32598f4
