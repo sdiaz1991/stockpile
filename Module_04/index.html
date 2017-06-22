@@ -24,8 +24,7 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-            </script>
-    <script>
+         <script>
 	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
 	Notification.requestPermission(function (permission) {
@@ -53,12 +52,11 @@
 		instance.onclose = function () {
 			// Something to do
 		};
-
-		return false;
 	}
 </script>
 
-<a href="#" onclick="return show()">Notify me!</a>        
+<button type="button" onclick="show()">Notify me!</button>   </script>
+         
             
 </head>
 	<body>
