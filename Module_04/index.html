@@ -25,6 +25,34 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
             </script>
+            
+            <script>
+	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
+	Notification.requestPermission(function (permission) {
+		// console.log(permission);
+	});
+	function show() {
+		var instance = new Notification(
+			"This is a test", {
+				body: "just checking!",
+				icon: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGEAAABgCAMAAAA6hOw0AAAAYFBMVEX///9isB5TqgBgrxharQBerhL8/ftbrQj4+/bh7tputTnp8+SizYnS5sj0+fHb69ODvl29262JwWe52adLpwBosiup0ZHB3LGu05p2uEpxtkB9u1bv9uuayYCRxXPG4LgwmZRAAAACvElEQVRoge2Z25aiMBBFyc2gArYKKir4/3/ZDC0IqWIkcjIPs/q8usheda/EKPrVf6s4TQ6HKg12fpYIaY2x8hDm/NVJWiVayUsIQCq06GRK/PmrWirxItzggHXxMqCRhnvpmKshQBUrMKCWYiS5xZ6fXbUDANfDzprR+QoNeEgVFnB0QgAHJC7ArrEAN4nggIMODCgJAFsH8dUGBpQuQGNdFG8IAGtBtjEOQGItYADYQosLB4BudsQCIc9YwJUAsCNt5WaRkBUUQApNaOx2tLq5AFNih/LN6UVCiQwK+HIB6KlfU8ADCqgkAZyggBMBWGwaXQgAvNudCQAc5TSnAGiUd9QCDW0WW6tcgCqQgIwCsEGIyUBoAHsgICLdrqmELyTAXe1aE+LZn99PG62Lw2U3+Ym7/baA+XM5lboJojJaijplK9Td39tEredboPskUUYWCc2PlAEoMd9HycjFyuY3x/w1LWW/3eXmpqGR1/PAWXdBC0HY+T5qFnR6gJLFsf+dLC6tpfN9xLX8P0doffyxgykE74bn3pOe0mLfMCqmEITxrTU6GTtfPfbsT/ndk8AW1I+vOBd99CjCxmJKauMP8EN8uMbPR5hPl4upWFATvMPciS5zrHTyKaBZSNnEcaSUTzW74voDMWHR5MwU0+McEz7K1JfWb6O9+ML5eINQ14UAdxxRE3aLCVH5t2h791ROGTfRehMgDxfc2O9MAF1G2JnTKketqZsJP6FMaKpiwgjg89GFReBMiCYaFKIWem2ZfILUwkuMn6AmREw+ATrSWOTeCX68aFSPB97SucAoHkdCH99/4qvRqPC5j8zXsI/bBQvGtIYjNcc+s3Wq+mBDG8ZAcU9AV1uv7pILr7aXnpUdIlWfek5UEybOrdqbsPG52fqqbeN5qDi3SqTRAf6OH+pSVgGj8Kt/pG8JSRqcgOaT+wAAAABJRU5ErkJggg=="
+			}
+		);
+		instance.onclick = function () {
+			// Something to do
+		};
+		instance.onerror = function () {
+			// Something to do
+		};
+		instance.onshow = function () {
+			// Something to do
+		};
+		instance.onclose = function () {
+			// Something to do
+		};
+	}
+</script>
+
 </head>
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
